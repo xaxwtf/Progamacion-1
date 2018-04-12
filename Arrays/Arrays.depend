@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1523547063 source:c:\users\alumno\desktop\arrays\main.c
+	<stdio.h>
+	<stdlib.h>
+	"funciones.h"
+
+1523546100 c:\users\alumno\desktop\arrays\funciones.h
+
