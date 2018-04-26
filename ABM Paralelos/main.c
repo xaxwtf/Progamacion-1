@@ -17,7 +17,8 @@ int main()
     int opcion;
     int index;
     int i;
-    int j=i+1;
+    int j;
+    int k=0;
     int aux;
     char buffer[TAM][20];
     do
@@ -100,12 +101,32 @@ int main()
 
 
         case 5:
-            for(i=0;i<TAM;i++)
+            for(i=0,k=0;i<TAM;i++)
             {
-                if(strcmp(nombre[i][i],nombre[j][i])=0)
-                    strcpy(buffer[i],nombre[i]);
-                    strcpy(nombre[i],nombre[j]);
-                    strcpy(nombre[j],buffer[i]);
+                for(j=i+1;j<TAM;i++)
+                {
+                    if(strcmp(nombre[i][k],nombre[j][k])>0)
+                    {
+                        strcpy(buffer[i],nombre[i]);
+                        strcpy(nombre[i],nombre[j]);
+                        strcpy(nombre[j],buffer[i]);
+                    }
+                    else if(strcmp(nombre[i][k],nombre[j][k])=0)
+                    {
+                        for(k=0;k<30;k++)
+                        {
+                            if(strcmp(nombre[i][k],nombre[j][k])>0)
+                            {
+                                strcpy(buffer[i],nombre[i]);
+                                strcpy(nombre[i],nombre[j]);
+                                strcpy(nombre[j],buffer[i]);
+                            }
+                        }
+                    }
+
+                }
+
+
             }
 
 
